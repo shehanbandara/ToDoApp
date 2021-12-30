@@ -93,7 +93,7 @@ h4 {
 	font-weight: 700;
 }
 
-.addPopup {
+.addPopUp {
 	position: fixed;
 	bottom: 32px;
 	right: 32px;
@@ -112,7 +112,7 @@ h4 {
 	cursor: pointer;
 }
 
-.popup {
+.popUp {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -126,7 +126,7 @@ h4 {
 	box-shadow: 0px 4px 32px var(--dark);
 }
 
-.closePopup {
+.closePopUp {
 	position: absolute;
 	top: 16px;
 	right: 16px;
@@ -137,7 +137,7 @@ h4 {
 	cursor: pointer;
 }
 
-.popup h3 {
+.popUp h3 {
 	color: var(--dark);
 	margin-bottom: 16px;
 	font-weight: 400;

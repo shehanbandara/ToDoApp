@@ -4,12 +4,9 @@ const APIBASE = 'http://localhost:3001';
 
 const ToDoList = () => {
     const [toDoList, setToDoList] = useState([]);
-    const [popupActive, setPopupActive] = useState(false);
-    const [newToDo, setNewToDo] = useState("");
 
     useEffect(() => {
 		GetToDoList();
-        console.log(toDoList);
 	}, []);
 
     const GetToDoList = () => {
@@ -37,13 +34,15 @@ const ToDoList = () => {
     return (
         <>
             <div className="ToDoList">
-                {toDoList.map(todo => (
+                {toDoList.length > 0 ? toDoList.map(todo => (
                     <div className={"todo " + (todo.complete ? "is-complete" : "")} key={todo._id}>
                         <div className="box"></div>
                         <div className="text" onClick={() => CompleteToDo(todo._id)}>{ todo.text }</div>
                         <div className="delete" onClick={() => DeleteToDo(todo._id)}>X</div>
                     </div>
-                ))}
+                )) : (
+                    <p>Your To-Do List Is Empty! 🥳</p>
+                )}
             </div>
         </>
     );
